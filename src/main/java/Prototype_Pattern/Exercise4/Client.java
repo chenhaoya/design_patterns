@@ -8,7 +8,7 @@
  * 开发名称：Client.java
  * 开发工具：IntelliJ IDEA
  * 当前用户：Chenhao
- * 说明：
+ * 说明：用于演示深克隆时奖引用的dataset对象一起复制，体现出与浅克隆的区别
  */
 package Prototype_Pattern.Exercise4;
 
