@@ -31,7 +31,7 @@ public class LoadBalancer {
         serverList = new ArrayList();
     }
 
-    public static LoadBalancer getInstance() {
+    public static LoadBalancer getInstanceLazy() {
         if (instance == null) {
             synchronized (LoadBalancer.class) {
                 if (instance == null) {
@@ -40,6 +40,14 @@ public class LoadBalancer {
             }
         }
         return instance;
+    }
+
+    private static class HolderClass{
+        private final static LoadBalancer instance = new LoadBalancer();
+    }
+
+    public static LoadBalancer getInstanceIoDH(){
+        return HolderClass.instance;
     }
 
     public void addServer(String server) {

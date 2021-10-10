@@ -18,10 +18,10 @@ package Singleton_Pattern.Practice6;
 public class Client_Lazy {
     public static void main(String[] args) {
         LoadBalancer balancer1,balancer2,balancer3,balancer4;
-        balancer1=LoadBalancer.getInstance();
-        balancer2=LoadBalancer.getInstance();
-        balancer3=LoadBalancer.getInstance();
-        balancer4=LoadBalancer.getInstance();
+        balancer1=LoadBalancer.getInstanceLazy();
+        balancer2=LoadBalancer.getInstanceLazy();
+        balancer3=LoadBalancer.getInstanceLazy();
+        balancer4=LoadBalancer.getInstanceLazy();
 
         if (balancer1 == balancer2&&balancer2==balancer3&&balancer3==balancer4) {
             System.out.println("服务器负载均衡器具有唯一性。");
@@ -37,5 +37,12 @@ public class Client_Lazy {
             String server = balancer1.getServer();
             System.out.println("分发请求值服务器：" + server);
         }
+
+        LoadBalancer s1,s2;
+        s1=LoadBalancer.getInstanceIoDH();
+        s2=LoadBalancer.getInstanceIoDH();
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+        System.out.println(s1==s2);
     }
 }
