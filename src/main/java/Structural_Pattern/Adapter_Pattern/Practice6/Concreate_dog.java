@@ -10,7 +10,7 @@
  * 当前用户：Chenhao
  * 说明：
  */
-package Structural_Pattern.Adapter_Pattern;
+package Structural_Pattern.Adapter_Pattern.Practice6;
 
 public class Concreate_dog implements Dog{
     public void dog_looks() {
