@@ -13,7 +13,7 @@
 package Structural_Pattern.Adapter_Pattern.Practice6;
 
 public class Concreate_cat implements Cat{
-    public void cat_loogs() {
+    public void cat_looks() {
         System.out.println("我是猫");
     }
 

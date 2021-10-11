@@ -24,7 +24,7 @@ public class Adapter implements Cat,Dog{
         this.cat = cat;
     }
 
-    public void cat_loogs() {
+    public void cat_looks() {
         System.out.println("我是一只猫");
     }
 

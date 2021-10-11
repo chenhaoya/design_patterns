@@ -16,7 +16,7 @@ public class Client {
     public static void main(String[] args) {
         Cat cat = new Adapter(new Concreate_dog());
         cat.catchMouse();
-        cat.cat_loogs();
+        cat.cat_looks();
 
         Dog dog = new Adapter(new Concreate_cat());
         dog.cry();
