@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Windows_Media_Player
+interface RealPlayer
+
+class adapter
+Windows_Media_Player <|..adapter
+RealPlayer <|..adapter
+
+
+@enduml
