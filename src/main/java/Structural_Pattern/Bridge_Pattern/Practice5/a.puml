@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface InterfacePlane{
++fly():void
+}
+
+abstract AbstractPlane{
+#ip:InterfacePlane
++setPlane()
++type():void
+}
+
+AbstractPlane o.. InterfacePlane
+
+class Airbus{
++fly():void
+}
+
+class Boeing{
++fly():void
+}
+
+class McDonnell_Douglas{
++fly():void
+}
+
+class Passenger_Plane{
++type():void
+}
+
+class Cargo_Plane{
++type():void
+}
+
+InterfacePlane <|.. Airbus
+InterfacePlane <|.. Boeing
+InterfacePlane <|.. McDonnell_Douglas
+
+AbstractPlane <|-- Passenger_Plane
+AbstractPlane <|-- Cargo_Plane
+
+@enduml
