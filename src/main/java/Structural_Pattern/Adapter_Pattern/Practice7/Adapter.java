@@ -13,4 +13,22 @@
 package Structural_Pattern.Adapter_Pattern.Practice7;
 
 public class Adapter implements RealPlayer,Windows_Media_Player{
+    private ConcreateRP concreateRP;
+    private ConcreateWMP concreateWMP;
+
+    public Adapter(ConcreateWMP concreateWMP) {
+        this.concreateWMP = concreateWMP;
+    }
+
+    public Adapter(ConcreateRP concreateRP) {
+        this.concreateRP = concreateRP;
+    }
+
+    public void RPplay() {
+        concreateRP.RPplay();
+    }
+
+    public void WMPplay() {
+        concreateWMP.WMPplay();
+    }
 }

@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Adapter{
+-qs:QuikSort
+-bs:BinarySearch
++sort(int [])
++search(int [],int)
+}
+
+DataIperation <|..Adapter
+
+Adapter *-- BinarySearch
+Adapter *-- QuikSort
+
+interface DataIperation{
++sort(int [])
++search(int [],int)
+}
+
+class QuikSort{
++quickSort()
+}
+
+class BinarySearch{
++binarySearch(int [],int)
+}
+
+
+
+@enduml
