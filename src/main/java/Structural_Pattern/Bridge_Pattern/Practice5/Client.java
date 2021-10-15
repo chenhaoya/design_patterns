@@ -12,7 +12,7 @@
  */
 package Structural_Pattern.Bridge_Pattern.Practice5;
 
-import Structural_Pattern.Bridge_Pattern.Practice5.Abstraction.AbstractPlane;
+
 import Structural_Pattern.Bridge_Pattern.Practice5.Implementer.InterfacePlane;
 import Structural_Pattern.Bridge_Pattern.Practice5.RefinedAbstraction.Cargo_Plane;
 
