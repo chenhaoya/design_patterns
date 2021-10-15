@@ -15,6 +15,7 @@ package Structural_Pattern.Bridge_Pattern.Practice5.RefinedAbstraction;
 import Structural_Pattern.Bridge_Pattern.Practice5.Abstraction.AbstractPlane;
 
 public class Passenger_Plane extends AbstractPlane {
+    @Override
     public void type() {
         interfacePlane.fly();
         System.out.println("载货飞机");

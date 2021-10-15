@@ -15,6 +15,7 @@ package Structural_Pattern.Bridge_Pattern.Practice5.ConcreteImplementer;
 import Structural_Pattern.Bridge_Pattern.Practice5.Implementer.InterfacePlane;
 
 public class Boeing implements InterfacePlane {
+    @Override
     public void fly() {
         System.out.println("波音");
     }
