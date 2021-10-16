@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface Documentation {
++ do():void
+}
+
+class TXT{
+ + do():void
+}
+Documentation <|.. TXT
+
+class XML{
+ + do():void
+}
+Documentation <|.. XML
+
+
+class PDF{
+ + do():void
+}
+Documentation <|.. PDF
+
+abstract Database {
+#  doc:Documentation
++ setDatabase(Documentation):void
++ parse():void
+}
+Database o.. Documentation
+
+class Oracle{
++ parse():void
+}
+
+Database <|-- Oracle
+
+class Mysql{
++ parse():void
+}
+
+Database <|-- Mysql
+
+class Redis{
++ parse():void
+}
+Database <|-- Redis
+
+class HBase{
++ parse():void
+}
+
+Database <|-- HBase
+@enduml
