@@ -28,6 +28,7 @@ public class Client {
         beijing.addList(new Office("行政办公室"));
 
 
+
         changsha.addList(new Office("教务办公室"));
         hunan.addList(changsha);
         hunan.addList(xiangtan);
@@ -41,6 +42,7 @@ public class Client {
         hunan.addList(new Office("教务办公室"));
         hunan.addList(new Office("行政办公室"));
 
-        beijing.official_document("aaa.txt");
+        xiangtan.official_document("aaa.txt");
+
     }
 }

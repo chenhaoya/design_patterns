@@ -33,16 +33,15 @@ public class Educational_institution extends Abstract_Office {
     }
 
     public Abstract_Office getList(int index) {
-        return (Abstract_Office) list.get(index);
+        return list.get(index);
     }
 
     @Override
     public void official_document(String a) {
         System.out.println(this.name + "下发了公文");
-        for (Object object : list) {
-            System.out.print("--");
-            System.out.println(getClass().getSimpleName());
-            ((Abstract_Office)object).official_document(a);
+
+        for (int i = 0; i < list.size(); i++) {
+            (list.get(i)).official_document(a);
         }
     }
 }
