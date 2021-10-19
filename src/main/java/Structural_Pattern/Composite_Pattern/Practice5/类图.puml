@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'class HuNan_Branch
+'class ChangSha_Teaching_point
+
+class Educational_institution extends Abstract_Office{
+-list:ArrayList{Abstract_Office}
++add(Abstract_Office a):void
++remove(Abstract_Office a):void
++getChild(int i):Abstract_Office
+}
+
+
+abstract class Abstract_Office{
+#name:String
++official_document(String s):void
+}
+
+class Educate_office extends Abstract_Office{
+#name:String
++getName():String
++Educate_office(String s)
++official_document(String s):void
+}
+
+class Administrative_office extends Abstract_Office{
+#name:String
++getName():String
++Administrative_office(String s)
++official_document(String s):void
+}
+
+
+@enduml

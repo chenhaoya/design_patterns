@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Element_control{
++operation():void
+}
+
+class Button{
++operation():void
+}
+
+class Text_Box{
++operation():void
+}
+
+Element_control <|--Button
+Element_control <|--Text_Box
+
+class Form {
+-ArrayList<Element_control> list = new ArrayList<Element_control>
++add(Element_control a) :void
++remove(Element_control a) :void
++operation():void
+}
+Element_control <|-- Form
+Form o--> Element_control
+
+class Client
+
+Client ..> Element_control
+
+@enduml
