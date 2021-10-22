@@ -21,10 +21,12 @@ public class Adapter implements DataOperation{
         this.quikSort=new QuikSort();
     }
 
+    @Override
     public void sort() {
         quikSort.quickSort();
     }
 
+    @Override
     public void search() {
         binarySearch.binarySearch();
     }

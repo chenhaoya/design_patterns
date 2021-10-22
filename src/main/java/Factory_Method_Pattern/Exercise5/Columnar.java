@@ -6,6 +6,7 @@
 package Factory_Method_Pattern.Exercise5;
 
 public class Columnar implements Shape{
+    @Override
     public void print() {
         System.out.println("柱状图");
     }

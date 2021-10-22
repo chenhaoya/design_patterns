@@ -24,18 +24,22 @@ public class Adapter implements Cat,Dog{
         this.cat = cat;
     }
 
+    @Override
     public void cat_looks() {
         System.out.println("我是一只猫");
     }
 
+    @Override
     public void dog_looks() {
         System.out.println("我是一条狗");
     }
 
+    @Override
     public void cry() {
         cat.catchMouse();
     }
 
+    @Override
     public void catchMouse() {
         dog.cry();
     }

@@ -8,6 +8,7 @@ package Abstract_Factory_Pattern.Exercise6.ConcreatProduct;
 import Abstract_Factory_Pattern.Exercise6.InterfaceController;
 
 public class IOS_InterfaceController implements InterfaceController {
+    @Override
     public void interfaceController() {
         System.out.println("IOS的游戏操作控制");
     }

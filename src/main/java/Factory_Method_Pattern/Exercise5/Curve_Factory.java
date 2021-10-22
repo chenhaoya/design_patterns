@@ -6,6 +6,7 @@
 package Factory_Method_Pattern.Exercise5;
 /**曲线*/
 public class Curve_Factory implements Shape_Factory{
+    @Override
     public Shape createShape() {
         return new Curve();
     }
