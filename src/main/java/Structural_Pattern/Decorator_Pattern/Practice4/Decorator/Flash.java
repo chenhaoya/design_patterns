@@ -15,8 +15,8 @@ package Structural_Pattern.Decorator_Pattern.Practice4.Decorator;
 import Structural_Pattern.Decorator_Pattern.Practice4.Component.Component;
 import Structural_Pattern.Decorator_Pattern.Practice4.ConcreteDecorator.Component_Decorator;
 
-public class Spinning_light extends Component_Decorator {
-    public Spinning_light(Component component) {
+public class Flash extends Component_Decorator {
+    public Flash(Component component) {
         super(component);
     }
 

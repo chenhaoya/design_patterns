@@ -15,7 +15,7 @@ package Structural_Pattern.Decorator_Pattern.Practice4;
 import Structural_Pattern.Decorator_Pattern.Practice4.Component.Component;
 import Structural_Pattern.Decorator_Pattern.Practice4.ConcreteComponent.A_Phone;
 import Structural_Pattern.Decorator_Pattern.Practice4.Decorator.JarPhone;
-import Structural_Pattern.Decorator_Pattern.Practice4.Decorator.Spinning_light;
+import Structural_Pattern.Decorator_Pattern.Practice4.Decorator.Flash;
 
 public class Client {
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class Client {
         Component component,component1,component2;
         component = new A_Phone();
         component1 = new JarPhone(component);
-        component2 = new Spinning_light(component1);
+        component2 = new Flash(component1);
         component2.display();
     }
 }
