@@ -4,14 +4,16 @@
  * 开发人员姓名：陈浩
  * 学号/工号：2019112102
  * 个人/公司邮箱：ch111222@qq.com
- * 时间：2021/10/25 16:16
- * 开发名称：Abstract_Facade
+ * 时间：2021/10/25 16:14
+ * 开发名称：Report_display
  * 开发工具：IntelliJ IDEA
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Facade_Pattern.Facade;
+package Structural_Pattern.Facade_Pattern.Practice4.SubSystem;
 
-public abstract class Abstract_Facade {
-    public abstract void file_processing(String fileName);
+public class Report_display {
+    public void report_display(){
+        System.out.println("以报表显示");
+    }
 }

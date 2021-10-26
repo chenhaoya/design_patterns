@@ -10,11 +10,11 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Facade_Pattern.Facade;
+package Structural_Pattern.Facade_Pattern.Practice4.Facade;
 
-import Structural_Pattern.Facade_Pattern.SubSystem.Convert_to_XML;
-import Structural_Pattern.Facade_Pattern.SubSystem.Report_display;
-import Structural_Pattern.Facade_Pattern.SubSystem.Statistical_Analysis;
+import Structural_Pattern.Facade_Pattern.Practice4.SubSystem.Convert_to_XML;
+import Structural_Pattern.Facade_Pattern.Practice4.SubSystem.Report_display;
+import Structural_Pattern.Facade_Pattern.Practice4.SubSystem.Statistical_Analysis;
 
 public class Facade extends Abstract_Facade {
     private Convert_to_XML convertToXml;

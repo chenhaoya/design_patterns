@@ -10,14 +10,14 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Facade_Pattern;
+package Structural_Pattern.Facade_Pattern.Practice4;
 
-import Structural_Pattern.Facade_Pattern.Facade.Facade;
+import Structural_Pattern.Facade_Pattern.Practice4.Facade.Facade;
 
 public class Client {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         Facade facade;
-        Class<?> aClass = Class.forName("Structural_Pattern.Facade_Pattern.Facade.Facade");
+        Class<?> aClass = Class.forName("Structural_Pattern.Facade_Pattern.Practice4.Facade.Facade");
         facade = (Facade) aClass.newInstance();
         facade.file_processing("aaa.xml");
         System.out.println("----------第二个文件----------");

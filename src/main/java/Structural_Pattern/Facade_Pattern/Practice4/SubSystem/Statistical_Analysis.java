@@ -10,7 +10,7 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Facade_Pattern.SubSystem;
+package Structural_Pattern.Facade_Pattern.Practice4.SubSystem;
 
 public class Statistical_Analysis {
     public void statisticsAnalysis() {
