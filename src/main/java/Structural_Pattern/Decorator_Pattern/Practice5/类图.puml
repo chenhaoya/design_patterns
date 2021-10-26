@@ -1,6 +1,15 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+interface Coffee{
+-price:float
++print()
++getPrice():float
+}
 
+class Espresso implements Coffee{
++print()
++getPrice():float
+}
 
 @enduml

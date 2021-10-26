@@ -4,14 +4,14 @@ interface Component{
 +display():void
 }
 
-class A_Phone extends Component{
+class A_Phone implements Component{
 +display():void
 }
-class B_Phone extends Component{
+class B_Phone implements Component{
 +display():void
 }
 
-class Component_Decorator extends Component{
+class Component_Decorator implements Component{
 -cd:Component
 +display():void
 +Component_Decorator(Component)
