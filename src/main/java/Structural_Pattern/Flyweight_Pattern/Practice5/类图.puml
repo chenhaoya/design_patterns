@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+interface FILE{
+gettype():String
+}
+
+class picture implements FILE{
+String type_
+gettype():String
+}
+
+class video implements FILE{
+String  type_
+gettype():String
+}
+
+class FlyweightFactory{
+flyweight:HashMap
+getFlyweight(String key):FILE
+}
+
+FILE <--o FlyweightFactory
+
+@enduml
