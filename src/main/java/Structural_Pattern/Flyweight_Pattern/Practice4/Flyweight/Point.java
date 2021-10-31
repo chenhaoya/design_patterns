@@ -13,6 +13,7 @@
 package Structural_Pattern.Flyweight_Pattern.Practice4.Flyweight;
 
 public class Point {
+    /*使用set？约束端口重复问题*/
     String point;
 
     public Point(String point) {
