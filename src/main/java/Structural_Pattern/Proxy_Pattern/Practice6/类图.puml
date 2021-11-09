@@ -2,23 +2,23 @@
 'https://plantuml.com/class-diagram
 
 interface Subject{
-Post : void
-edit_personal_information : void
-Edit_Post : void
+Post : boolean
+edit_personal_information : boolean
+Edit_Post : boolean
 }
 
 class RealSubject {
-Post : void
-edit_personal_information : void
-Edit_Post : void
+Post : boolean
+edit_personal_information : boolean
+Edit_Post : boolean
 }
 
 Subject <|.. RealSubject
 
 class Proxy{
-Post : void
-edit_personal_information : void
-Edit_Post : void
+Post : boolean
+edit_personal_information : boolean
+Edit_Post : boolean
 }
 Proxy ..|> Subject
 @enduml

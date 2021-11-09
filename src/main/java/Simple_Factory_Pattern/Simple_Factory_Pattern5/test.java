@@ -7,7 +7,7 @@ package Simple_Factory_Pattern.Simple_Factory_Pattern5;
 
 public class test {
     public static void main(String[] args) {
-        Shape shape = Shape_Factory.getShape("Cicle");
-        //Shape.draw();
+        Shape shape = Shape_Factory.getShape("Circle");
+        shape.draw();
     }
 }
