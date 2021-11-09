@@ -12,5 +12,12 @@
  */
 package Structural_Pattern.Proxy_Pattern.Practice6;
 
+import Structural_Pattern.Proxy_Pattern.Practice6.Proxy.ProxyBBS;
+import Structural_Pattern.Proxy_Pattern.Practice6.Subject.BBS;
+
 public class Client {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        ProxyBBS proxyBBS = new ProxyBBS("aaaa",2);
+        proxyBBS.edit_personal_infomation();
+    }
 }
