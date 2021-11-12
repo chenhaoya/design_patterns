@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class FunctionButton{
+- command : Command
++ setCommand(Command command):void
++ click()
+}
+
+interface Command{
++ execute() : void
+}
+
+FunctionButton <|--> Command
+
+class ExitCommand implements Command {
+- seObj : SystemExtClass
++ execute() : void
+}
+
+class SystemExtClass{
++ exit() : void
+}
+
+ExitCommand <|--> SystemExtClass
+
+class HelpCommand implements Command{
+- hcObj : DisplayHelpClass
++ execute() : void
+}
+
+class DisplayHelpClass {
++ display () : void
+}
+
+HelpCommand <|--> DisplayHelpClass
+
+@enduml
