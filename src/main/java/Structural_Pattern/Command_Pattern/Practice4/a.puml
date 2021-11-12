@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class CalculatorForm{
+- command : AbstractCommand
++ setCommand(AbstractCommand a) : void
++ compute (int value): void
++ undo():void
+}
+
+abstract class AbstractCommand{
++ execute(int value) : int
++ undo() : int
+}
+
+CalculatorForm o--> AbstractCommand
+
+class AddCommand extends AbstractCommand{
+-adder : Adder
+-value : int
++ execute(int value) : int
++ undo() ：int
+}
+
+class Adder {
+-num: int = 0
++ add(int value):int
+}
+
+AddCommand *--> Adder
+
+
+
+@enduml

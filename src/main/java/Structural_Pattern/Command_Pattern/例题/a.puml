@@ -11,7 +11,7 @@ interface Command{
 + execute() : void
 }
 
-FunctionButton <|--> Command
+FunctionButton o--> Command
 
 class ExitCommand implements Command {
 - seObj : SystemExtClass
@@ -22,7 +22,7 @@ class SystemExtClass{
 + exit() : void
 }
 
-ExitCommand <|--> SystemExtClass
+ExitCommand o--> SystemExtClass
 
 class HelpCommand implements Command{
 - hcObj : DisplayHelpClass
@@ -33,6 +33,6 @@ class DisplayHelpClass {
 + display () : void
 }
 
-HelpCommand <|--> DisplayHelpClass
+HelpCommand o--> DisplayHelpClass
 
 @enduml
