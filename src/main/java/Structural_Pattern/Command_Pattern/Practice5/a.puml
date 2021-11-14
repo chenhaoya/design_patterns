@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+'请求处理者
+class Log_{
++ log_in()
+- log_record()
+}
+'请求发送者
+class Invoker{
+- command:Command
++ request():void
++ setCommand(Command a)
+}
+Invoker <--o Command
+'抽象命令类
+abstract class Command{
++ abstract request():void
+}
+'具体命令类
+class Log_Command extends Command{
+- log_ : Log_
++ request()
+}
+
+Log_ <--o Log_Command
+@enduml
