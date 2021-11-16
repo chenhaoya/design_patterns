@@ -12,6 +12,17 @@
  */
 package Structural_Pattern.Command_Pattern.Practice6;
 
-public class Client {
+import Structural_Pattern.Command_Pattern.Practice6.ConcreteCommand.CreateCommand;
+import Structural_Pattern.Command_Pattern.Practice6.Invoker.Menu;
+import Structural_Pattern.Command_Pattern.Practice6.Invoker.Menultem;
+import Structural_Pattern.Command_Pattern.Practice6.Receiver.BoardScreen;
 
+public class Client {
+    public static void main(String[] args) {
+        BoardScreen boardScreen = new BoardScreen();
+        CreateCommand createCommand = new CreateCommand(boardScreen);
+        Menu menu = new Menu();
+        menu.addMenuItem(new Menultem("aaa",createCommand));
+        menu.getMenuItem("aaa").clicked();
+    }
 }
