@@ -46,6 +46,8 @@ public class Client {
         emoteControl_iterator.next();
         emoteControl_iterator.next();
 
+
+        System.out.println("--------------------------------");
         //当前为最后一个频道，再往下跳一个频道就自动跳到第一个频道
         emoteControl_iterator.next();
     }

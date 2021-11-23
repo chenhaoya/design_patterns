@@ -41,6 +41,7 @@ public class Conreete_Iterator implements EmoteControl_Iterator {
             System.out.println(this.currentItem());
         }else {
             this.cursor=0;
+            System.out.println(this.currentItem());
         }
     }
 
