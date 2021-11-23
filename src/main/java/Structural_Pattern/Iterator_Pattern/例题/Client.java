@@ -10,12 +10,11 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Iterator_Pattern;
+package Structural_Pattern.Iterator_Pattern.例题;
 
-import Structural_Pattern.Iterator_Pattern.Aggregate.AbstractObjectList;
-import Structural_Pattern.Iterator_Pattern.ConcreteIterator.ProductIterator;
-import Structural_Pattern.Iterator_Pattern.Concreteaggregate.ProductList;
-import Structural_Pattern.Iterator_Pattern.Iterator.AbstractIterator;
+import Structural_Pattern.Iterator_Pattern.例题.Aggregate.AbstractObjectList;
+import Structural_Pattern.Iterator_Pattern.例题.Concreteaggregate.ProductList;
+import Structural_Pattern.Iterator_Pattern.例题.Iterator.AbstractIterator;
 
 import java.util.ArrayList;
 import java.util.List;

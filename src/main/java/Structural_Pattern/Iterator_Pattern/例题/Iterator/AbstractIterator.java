@@ -10,7 +10,7 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Iterator_Pattern.Iterator;
+package Structural_Pattern.Iterator_Pattern.例题.Iterator;
 
 public interface AbstractIterator {
     void next();            //移至下一个元素

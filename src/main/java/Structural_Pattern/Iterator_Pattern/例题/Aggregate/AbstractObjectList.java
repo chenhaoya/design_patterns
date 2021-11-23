@@ -10,9 +10,9 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Iterator_Pattern.Aggregate;
+package Structural_Pattern.Iterator_Pattern.例题.Aggregate;
 
-import Structural_Pattern.Iterator_Pattern.ConcreteIterator.ProductIterator;
+import Structural_Pattern.Iterator_Pattern.例题.ConcreteIterator.ProductIterator;
 
 import java.util.ArrayList;
 import java.util.List;
