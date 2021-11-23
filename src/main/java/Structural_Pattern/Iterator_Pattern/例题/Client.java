@@ -44,8 +44,8 @@ public class Client {
         System.out.println();
         System.out.println("--------------------------------");
         System.out.println("逆向遍历");
-        while (!iterator.isLast()) {
-            System.out.println(iterator.getPreviousItem()+",");
+        while (!iterator.isFirst()) {
+            System.out.printf(iterator.getPreviousItem()+",");
             iterator.previous();
         }
     }

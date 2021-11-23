@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Channel_Aggregate{
+# list : List<Object>
++addObject(Object obj) : void
++removeObject(Object obj):void
++getObjects() :List
++createIterator() : EmoteControl_Iterator
+}
+
+interface EmoteControl_Iterator{
++first() : void
++next():void
++hasNext():boolean
++currentItem():Object
+}
+
+class ConcreteAggregate extends Channel_Aggregate{
++createIterator() :EmoteControl_Iterator
+}
+
+class ConcreteIterator implements EmoteControl_Iterator{
+-object:Channel_Aggregate
+-cursor:int
++first() : void
++next():void
++hasNext():boolean
++currentItem():Object
+}
+
+ConcreteAggregate ..>ConcreteIterator
+ConcreteIterator --> ConcreteAggregate
+
+@enduml
