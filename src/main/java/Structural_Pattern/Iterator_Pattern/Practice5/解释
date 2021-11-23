@@ -1,0 +1,13 @@
+使用了java内置迭代器
+补充知识：Comparable接口
+　compareTo方法内必须做非空判断（规范问题），当然int类型就不用了。
+　　注意事项：
+
+　　　　1、模型必须实现Comparable<T>接口
+
+　　　　2、Collection.sort(list)会自动调用compareTo,如果没有这句，list是不会排序的，也不会调用compareTo方法
+
+　　　　3、如果是数组则用Arrays.sort(a)方法
+
+参考资料；https://www.cnblogs.com/lukelook/p/11101366.html
+        https://zhuanlan.zhihu.com/p/54004622
