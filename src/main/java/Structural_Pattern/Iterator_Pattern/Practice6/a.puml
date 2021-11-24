@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Product{
+#list:Arraylist
++Product(Arraylist list);
++getlist():Arraylist;
++iterator():Iterator;
+}
+
+class ProductConcrete extends Product {
++Product(Arraylist list);
++getlist():Arraylist;
++iterator():Iterator;
+}
+
+IteratorConcrete <.. ProductConcrete
+IteratorConcrete --> ProductConcrete
+
+interface Iterator{
++next():Object;
++hasNext():boolean;
++pagination(int count):Object[];
+}
+
+class IteratorConcrete implements Iterator{
+-list:Arraylist list;
+-pc:ProductConcrete;
++IteratorConcrete(ProductConcrete pc)
++next():Object;
++hasNext():boolean;
++pagination(int count):Object[];
+}
+@enduml
