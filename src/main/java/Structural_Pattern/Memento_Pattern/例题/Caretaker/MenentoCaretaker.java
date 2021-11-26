@@ -8,11 +8,11 @@
  * 开发名称：MenentoCaretaker
  * 开发工具：IntelliJ IDEA
  * 当前用户：CH
- * 描述：
+ * 描述：负责人（管理者）
  */
-package Structural_Pattern.Memento_Pattern.Caretaker;
+package Structural_Pattern.Memento_Pattern.例题.Caretaker;
 
-import Structural_Pattern.Memento_Pattern.Memento.ChessmanMemento;
+import Structural_Pattern.Memento_Pattern.例题.Memento.ChessmanMemento;
 
 public class MenentoCaretaker {
     private ChessmanMemento memento;

@@ -8,11 +8,11 @@
  * 开发名称：Chessman
  * 开发工具：IntelliJ IDEA
  * 当前用户：CH
- * 描述：
+ * 描述：原发器
  */
-package Structural_Pattern.Memento_Pattern.Originaior;
+package Structural_Pattern.Memento_Pattern.例题.Originaior;
 
-import Structural_Pattern.Memento_Pattern.Memento.ChessmanMemento;
+import Structural_Pattern.Memento_Pattern.例题.Memento.ChessmanMemento;
 
 public class Chessman {
     private String label;
@@ -57,9 +57,9 @@ public class Chessman {
 
     //恢复状态
     public void restore(ChessmanMemento chessmanMemento) {
-        this.label=chessmanMemento.getLabel();
-        this.x=chessmanMemento.getX();
-        this.y= chessmanMemento.getY();
+        this.label = chessmanMemento.getLabel();
+        this.x = chessmanMemento.getX();
+        this.y = chessmanMemento.getY();
     }
 
 }

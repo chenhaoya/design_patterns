@@ -10,22 +10,28 @@
  * 当前用户：CH
  * 描述：
  */
-package Structural_Pattern.Memento_Pattern;
+package Structural_Pattern.Memento_Pattern.例题;
 
-import Structural_Pattern.Memento_Pattern.Caretaker.MenentoCaretaker;
-import Structural_Pattern.Memento_Pattern.Originaior.Chessman;
+import Structural_Pattern.Memento_Pattern.例题.Caretaker.MenentoCaretaker;
+import Structural_Pattern.Memento_Pattern.例题.Originaior.Chessman;
 
 public class Client {
     public static void main(String[] args) {
         MenentoCaretaker menentoCaretaker = new MenentoCaretaker();
         Chessman chess = new Chessman("车", 1, 1);
+        display(chess);
         menentoCaretaker.setMemento(chess.save());
         chess.setX(4);
-
-
+        display(chess);
+        menentoCaretaker.setMemento(chess.save());
+        chess.setX(5);
+        display(chess);
+        System.out.println("*****悔棋*****");
+        chess.restore(menentoCaretaker.getMemento());
+        display(chess);
 
     }
     public static void display(Chessman chessman){
-
+        System.out.println("棋子\""+chessman.getLabel()+"\"当前位置"+"第"+chessman.getX()+"行"+"第"+chessman.getY()+"列");
     }
 }

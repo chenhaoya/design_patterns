@@ -8,11 +8,9 @@
  * 开发名称：ChessmanMemento
  * 开发工具：IntelliJ IDEA
  * 当前用户：CH
- * 描述：
+ * 描述：备忘录
  */
-package Structural_Pattern.Memento_Pattern.Memento;
-
-import Structural_Pattern.Memento_Pattern.Originaior.Chessman;
+package Structural_Pattern.Memento_Pattern.例题.Memento;
 
 public class ChessmanMemento {
     private String label;
