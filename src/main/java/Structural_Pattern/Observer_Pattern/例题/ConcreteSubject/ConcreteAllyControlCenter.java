@@ -27,7 +27,7 @@ public class ConcreteAllyControlCenter extends AllyControlCenter {
         System.out.println(this.getAllyName()+"战队通知，盟友"+name_+"遭受敌人攻击！");
         for (Observer observer :
             this.players) {
-            if (observer.getName().equalsIgnoreCase(name_)){
+            if (!observer.getName().equalsIgnoreCase(name_)){
                 observer.help_();
             }
         }

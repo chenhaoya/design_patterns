@@ -43,5 +43,6 @@ public class Player implements Observer {
     @Override
     public void beAttacked(AllyControlCenter allyControlCenter) {
         System.out.println(this.name_+"被攻击");
+        allyControlCenter.notifyObservers(this.name_);
     }
 }
