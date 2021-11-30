@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Transmission_door{
+-Transmission_Door_State TDS
++Transmission_Door_State():void
++setState(Transmission_Door_State TDS):void
++click():void
++complete():void
++timeout():void
+}
+
+abstract class Transmission_Door_State{
+#td:Transmission_door
++getTD():Transmission_door
++click():void
++complete():void
++timeout():void
+}
+
+Transmission_door --> Transmission_Door_State
+
+class Closed extends Transmission_Door_State{
+
+}
+
+class Opening extends Transmission_Door_State{
+
+}
+
+class Closing extends Transmission_Door_State{
+
+}
+
+class Open extends Transmission_Door_State{
+
+}
+
+class StayOpen extends Transmission_Door_State{
+
+}
+
+@enduml
