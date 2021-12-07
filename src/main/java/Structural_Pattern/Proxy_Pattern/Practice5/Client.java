@@ -19,6 +19,6 @@ public class Client{
         Proxy_Log proxy_log;
         Class<?> aClass = Class.forName("Structural_Pattern.Proxy_Pattern.Practice5.Proxy.Proxy_Log");
         proxy_log = (Proxy_Log) aClass.newInstance();
-        proxy_log.login("aaa", "bbb");
+        proxy_log.method("aaa","bbb");
     }
 }

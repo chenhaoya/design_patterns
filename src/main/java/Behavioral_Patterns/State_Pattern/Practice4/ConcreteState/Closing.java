@@ -15,18 +15,18 @@ package Behavioral_Patterns.State_Pattern.Practice4.ConcreteState;
 import Behavioral_Patterns.State_Pattern.Practice4.State.TransmissionDoorState;
 
 public class Closing extends TransmissionDoorState {
-    public Closing(TransmissionDoorState TDS) {
-        this.transmissionDoor = TDS.getTransmissionDoor();
+    public Closing(String name) {
+        this.name_=name;
     }
 
     @Override
     public void onClick() {
-//        if (this.transmissionDoor )
+        System.out.println("click事件;当前状态："+this.name_);
     }
 
     @Override
     public void complete() {
-
+        System.out.println("complete事件;当前状态："+this.name_);
     }
 
     @Override

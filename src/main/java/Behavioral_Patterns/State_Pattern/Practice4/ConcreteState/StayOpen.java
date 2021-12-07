@@ -15,9 +15,13 @@ package Behavioral_Patterns.State_Pattern.Practice4.ConcreteState;
 import Behavioral_Patterns.State_Pattern.Practice4.State.TransmissionDoorState;
 
 public class StayOpen extends TransmissionDoorState {
+    public StayOpen(String name) {
+        this.name_=name;
+    }
+
     @Override
     public void onClick() {
-
+        System.out.println("click事件;当前状态："+this.name_);
     }
 
     @Override

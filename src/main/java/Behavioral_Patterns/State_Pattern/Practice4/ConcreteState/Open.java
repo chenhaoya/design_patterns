@@ -15,9 +15,13 @@ package Behavioral_Patterns.State_Pattern.Practice4.ConcreteState;
 import Behavioral_Patterns.State_Pattern.Practice4.State.TransmissionDoorState;
 
 public class Open extends TransmissionDoorState {
+    public Open(String name_) {
+        this.name_=name_;
+    }
+
     @Override
     public void onClick() {
-
+        System.out.println("click事件;当前状态："+this.name_);
     }
 
     @Override
@@ -27,6 +31,6 @@ public class Open extends TransmissionDoorState {
 
     @Override
     public void timeout() {
-
+        System.out.println("timeout事件;当前状态："+this.name_);
     }
 }

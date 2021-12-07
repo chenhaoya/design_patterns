@@ -12,23 +12,15 @@
  */
 package Behavioral_Patterns.State_Pattern.Practice4.Context;
 
-import Behavioral_Patterns.State_Pattern.Practice4.ConcreteState.Closed;
-import Behavioral_Patterns.State_Pattern.Practice4.ConcreteState.Closing;
-import Behavioral_Patterns.State_Pattern.Practice4.ConcreteState.Open;
+import Behavioral_Patterns.State_Pattern.Practice4.ConcreteState.*;
 import Behavioral_Patterns.State_Pattern.Practice4.State.TransmissionDoorState;
 
 public class TransmissionDoor {
     private TransmissionDoorState TDState;
 
-    private TransmissionDoorState closed,closing,open,opening,stayopen;
 
     public TransmissionDoor() {
-        this.closed = new Closed();
-        this.closing = new Closing(this.TDState);
-        this.open = new Open();
-
-
-        this.TDState =null;
+        this.TDState =new Closed("已关闭");
     }
 
     public void setState(TransmissionDoorState state) {
@@ -36,14 +28,36 @@ public class TransmissionDoor {
     }
 
     public void onClick(){
+        if (this.TDState.getName_().equalsIgnoreCase("已关闭")||this.TDState.getName_().equalsIgnoreCase("正在关闭")) {
+            this.TDState=new Opening("正在打开");
+        } else if (this.TDState.getName_().equalsIgnoreCase("正在打开")||this.TDState.getName_().equalsIgnoreCase("保持打开")) {
+            this.TDState = new Closing("正在关闭");
+        } else if (this.TDState.getName_().equalsIgnoreCase("打开")) {
+            this.TDState = new StayOpen("保持打开");
+        } else {
+            System.out.println("操作错误");
+        }
         this.TDState.onClick();
     }
 
+
     public void complete() {
+        if (this.TDState.getName_().equalsIgnoreCase("正在打开")) {
+            this.TDState = new Open("打开");
+        } else if (this.TDState.getName_().equalsIgnoreCase("正在关闭")) {
+            this.TDState = new Closed("已关闭");
+        } else {
+            System.out.println("操作错误");
+        }
         this.TDState.complete();
     }
 
     public void timeout() {
+        if (this.TDState.getName_().equalsIgnoreCase("打开")) {
+            this.TDState = new Closing("正在关闭 ");
+        } else {
+            System.out.println("操作错误");
+        }
         this.TDState.timeout();
     }
 }

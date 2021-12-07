@@ -12,5 +12,22 @@
  */
 package Behavioral_Patterns.State_Pattern.Practice4;
 
+import Behavioral_Patterns.State_Pattern.Practice4.Context.TransmissionDoor;
+
 public class Client {
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+        Class<TransmissionDoor> transmissionDoorClass = TransmissionDoor.class;
+        TransmissionDoor transmissionDoor = transmissionDoorClass.newInstance();
+
+        transmissionDoor.onClick();
+        transmissionDoor.onClick();
+        transmissionDoor.onClick();
+        transmissionDoor.complete();
+        transmissionDoor.onClick();
+        transmissionDoor.onClick();
+        transmissionDoor.onClick();
+        transmissionDoor.complete();
+        transmissionDoor.timeout();
+        transmissionDoor.complete();
+    }
 }

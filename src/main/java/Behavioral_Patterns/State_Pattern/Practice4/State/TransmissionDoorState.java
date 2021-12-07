@@ -15,10 +15,16 @@ package Behavioral_Patterns.State_Pattern.Practice4.State;
 import Behavioral_Patterns.State_Pattern.Practice4.Context.TransmissionDoor;
 
 public abstract class TransmissionDoorState {
+    protected String name_;
+
     protected TransmissionDoor transmissionDoor;
 
     public TransmissionDoor getTransmissionDoor() {
         return transmissionDoor;
+    }
+
+    public String getName_() {
+        return name_;
     }
 
     public abstract void onClick();
