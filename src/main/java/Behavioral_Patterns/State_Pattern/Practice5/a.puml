@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class User{
+-String name;
+-int integral;
+-UserState state_;
++reply_message(String message):void;
++message(String message):void;
++download():void;
++getIntegral():int;
++getName():String;
++getState():UserState;
+}
+UserState <..> User
+abstract class UserState{
+#User user;
++reply_message(String message):void;
++message(String message):void;
++download():void;
++stateCheck();
+}
+
+class Greenhorn extends UserState{
++reply_message(String message):void;
++message(String message):void;
++download():void;
++stateCheck();
+}
+
+class Master extends UserState{
++reply_message(String message):void;
++message(String message):void;
++download():void;
++stateCheck();
+}
+
+class Expert extends UserState{
++reply_message(String message):void;
++message(String message):void;
++download():void;
++stateCheck();
+}
+
+
+@enduml
