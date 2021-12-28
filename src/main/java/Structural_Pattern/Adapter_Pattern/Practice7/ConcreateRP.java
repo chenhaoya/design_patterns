@@ -13,6 +13,7 @@
 package Structural_Pattern.Adapter_Pattern.Practice7;
 
 public class ConcreateRP implements RealPlayer{
+    @Override
     public void RPplay() {
         System.out.println("RealPlayer");
     }

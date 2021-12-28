@@ -6,6 +6,7 @@
 package Creational_Patterns.Factory_Method_Pattern.Exercise4.Exercise4_2;
 
 public class BMW_Car implements Car{
+    @Override
     public void print() {
         System.out.println("BMW_Car");
     }

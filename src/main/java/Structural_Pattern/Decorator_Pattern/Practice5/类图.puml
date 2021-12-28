@@ -1,15 +1,49 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-interface Coffee{
--price:float
-+print()
-+getPrice():float
+abstract class Beverage{
++getDescription():String
++getCost():int
 }
-
-class Espresso implements Coffee{
-+print()
-+getPrice():float
+class Espresso extends Beverage{
+-descriptions:String
++getDescription():String
++getCost():int
+}
+class House_Blend extends Beverage{
+-descriptions:String
++getDescription():String
++getCost():int
+}
+class DarkRoast extends Beverage{
+-descriptions:String
++getDescription():String
++getCost():int
+}
+Decorator o--> Beverage
+class Decorator extends Beverage{
+-descriptions:String
+-beverage:Beverage
++getDescription():String
++getCost():int
+}
+class Mocha extends Decorator{
+-descriptions:String
++Mocha()
++getDescription():String
++getCost():int
+}
+class Whip extends Decorator{
+-descriptions:String
++Mocha()
++getDescription():String
++getCost():int
+}
+class Milk extends Decorator{
+-descriptions:String
++Mocha()
++getDescription():String
++getCost():int
 }
 
 @enduml

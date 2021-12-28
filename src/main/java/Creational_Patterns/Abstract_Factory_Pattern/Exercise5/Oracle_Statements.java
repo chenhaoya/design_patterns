@@ -6,6 +6,7 @@
 package Creational_Patterns.Abstract_Factory_Pattern.Exercise5;
 
 public class Oracle_Statements implements Statements {
+    @Override
     public void print() {
         System.out.println("Oracle的语句对象");
     }
